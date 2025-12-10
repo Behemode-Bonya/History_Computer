@@ -3,7 +3,7 @@ from gtts import gTTS
 
 
 def get_text():
-    with pdfplumber.open("andrew.pdf") as file:
+    with pdfplumber.open("text.pdf") as file:
         pages = [page.extract_text() for page in file.pages]
         text = " ".join(pages).replace("\n"," ")
     return text
